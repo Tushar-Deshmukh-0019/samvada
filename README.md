@@ -93,8 +93,8 @@ This starts both the backend (NestJS, port 3000) and frontend (Vite, port 5173) 
 
 ## Usage
 
-- **Citizen UI**: http://localhost:5173 — Enter `1092` on the dialpad and call
-- **Agent Dashboard**: http://localhost:5173/agent
+- **Citizen UI**:Enter `1092` on the dialpad and call
+- **Agent Dashboard**: 
 
 ---
 
