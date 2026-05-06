@@ -1,0 +1,75 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                         SAMVADA PROJECT STRUCTURE                            ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+samvada/
+│
+├── deployment/                          ← All deployment docs here
+│   ├── INDEX.md                         ← Start here (documentation index)
+│   ├── README.md                        ← Deployment overview
+│   ├── QUICK_DEPLOY.md                  ← 5-minute quick start ⚡
+│   ├── DEPLOYMENT.md                    ← Complete step-by-step guide
+│   ├── DEPLOYMENT_CHECKLIST.md          ← Verification checklist
+│   ├── DEPLOYMENT_SUMMARY.txt           ← Quick summary
+│   ├── LOCAL_DEVELOPMENT.md             ← Local setup guide
+│   └── FOLDER_STRUCTURE.txt             ← This file
+│
+├── samvada-backend/                     ← NestJS backend
+│   ├── src/                             ← Source code
+│   ├── .env.backend                     ← Environment template ⚠️
+│   ├── .env                             ← Your actual env (create this)
+│   ├── render.yaml                      ← Render deployment config
+│   └── package.json
+│
+├── samvada-frontend/                    ← React + Vite frontend
+│   ├── src/                             ← Source code
+│   ├── .env.frontend                    ← Environment template ⚠️
+│   ├── .env                             ← Your actual env (create this)
+│   ├── vercel.json                      ← Vercel deployment config
+│   └── package.json
+│
+├── README.md                            ← Main project README
+├── DEPLOYMENT_READY.md                  ← Quick deployment reference
+├── .gitignore                           ← Git ignore rules
+└── package.json                         ← Root package (monorepo scripts)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  IMPORTANT: Environment Files
+
+DO NOT commit .env files to Git!
+
+Template files (safe to commit):
+  ✓ samvada-backend/.env.backend
+  ✓ samvada-frontend/.env.frontend
+
+Your actual files (NEVER commit):
+  ✗ samvada-backend/.env
+  ✗ samvada-frontend/.env
+
+To set up:
+  cd samvada-backend
+  cp .env.backend .env
+  # Edit .env with your credentials
+
+  cd ../samvada-frontend
+  cp .env.frontend .env
+  # Edit .env with your backend URL
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 Where to Start
+
+Local Development:
+  → deployment/LOCAL_DEVELOPMENT.md
+
+Quick Deploy (5 min):
+  → deployment/QUICK_DEPLOY.md
+
+Complete Deploy Guide:
+  → deployment/DEPLOYMENT.md
+
+Documentation Index:
+  → deployment/INDEX.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

@@ -1,0 +1,15 @@
+{
+  "name": "samvada",
+  "version": "1.0.0",
+  "description": "AI-Assisted Helpline System — monorepo root",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix samvada-backend && npm install --prefix samvada-frontend",
+    "dev": "concurrently --names \"BACKEND,FRONTEND,URLS\" --prefix-colors \"cyan,magenta,green\" \"cd samvada-backend && npm run start:dev\" \"cd samvada-frontend && npm run dev\" \"node scripts/print-urls.js\"",
+    "build": "npm run build --prefix samvada-backend && npm run build --prefix samvada-frontend",
+    "start": "concurrently --names \"BACKEND,FRONTEND,URLS\" --prefix-colors \"cyan,magenta,green\" \"cd samvada-backend && npm run start:prod\" \"cd samvada-frontend && npm run preview\" \"node scripts/print-urls.js\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
