@@ -30,7 +30,14 @@ export function DialPad({ onCall }: DialPadProps) {
   return (
     <div className="dialpad-container">
       <div className="dialpad-header">
-        <span className="logo-text">Samvada</span>
+        <span 
+          className="logo-text" 
+          onClick={() => window.location.href = '/agent'}
+          style={{ cursor: 'pointer' }}
+          title="Go to Agent Dashboard"
+        >
+          Samvada
+        </span>
         <span className="logo-sub">1092 Helpline</span>
       </div>
 
