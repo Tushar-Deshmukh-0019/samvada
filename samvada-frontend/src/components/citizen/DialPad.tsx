@@ -20,7 +20,7 @@ export function DialPad({ onCall }: DialPadProps) {
   };
 
   const handleCall = () => {
-    if (input.length > 0) {
+    if (input === '1092') {
       onCall(input);
     }
   };
@@ -80,7 +80,7 @@ export function DialPad({ onCall }: DialPadProps) {
         <button
           className={`call-btn ${input === '1092' ? 'call-btn-ready' : ''}`}
           onClick={handleCall}
-          disabled={input.length === 0}
+          disabled={input !== '1092'}
           aria-label="Call"
         >
           <Phone size={28} color="white" />
